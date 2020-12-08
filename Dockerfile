@@ -1,15 +1,14 @@
 FROM python:3.6-alpine
 
-LABEL 
-      org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="ansible-docker" \
-      org.label-schema.description="Dockercontainer for running Ansible Playbookds" \
-      org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vendor="daBONDi" \
-      org.label-schema.version=$VERSION \
-      org.label-schema.schema-version="1.0"
-      org.label-schema.vcs-url="https://github.com/daBONDi/ansible-docker" \
-      org.label-schema.url="https://github.com/daBONDi/ansible-docker/blob/master/README.md"
+LABEL org.label-schema.build-date=$BUILD_DATE \
+  org.label-schema.name="ansible-docker" \
+  org.label-schema.description="Dockercontainer for running Ansible Playbookds" \
+  org.label-schema.vcs-ref=$VCS_REF \
+  org.label-schema.vendor="daBONDi" \
+  org.label-schema.version=$VERSION \
+  org.label-schema.schema-version="1.0" \
+  org.label-schema.vcs-url="https://github.com/daBONDi/ansible-docker" \
+  org.label-schema.url="https://github.com/daBONDi/ansible-docker/blob/master/README.md"
 
 # Install new packages
 RUN apk add --update build-base python3-dev jpeg-dev zlib-dev libffi-dev openssl-dev git openssh-client sshpass
